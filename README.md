@@ -3,10 +3,6 @@
 SSTA is a simple tool that helps you monitor your computer's current network connections. \
 It shows all active connections along with their associated process IDs. \
 Optionally, you can log the connections for 10 minutes into a log file.\
-Features: 
-
-* Displays active network connections and their process IDs
-* Option to log connections for 10 minutes
 
 # Permissions
 
