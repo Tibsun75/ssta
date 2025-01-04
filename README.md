@@ -26,6 +26,10 @@ Simply run SSTA via the terminal:
 
 ssta
 
+or open from gnome, kde etc.:
+![grafik](https://github.com/user-attachments/assets/9abbd45f-fd62-42e5-b738-945b37bb67fe)
+
+
 # Screenshots
 
 Languages:
