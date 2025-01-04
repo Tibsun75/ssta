@@ -1,4 +1,3 @@
-# ssta
 # SSTA - Simple Traffic Analyzer
 
 SSTA is a simple tool that helps you monitor your computer's current network connections. It shows all active connections along with their associated process IDs. Optionally, you can log the connections for 10 minutes into a log file.
@@ -7,7 +6,7 @@ Features
 * Displays active network connections and their process IDs
 * Option to log connections for 10 minutes
 
-Permissions
+# Permissions
 
 To run the program correctly, the following Snap permissions must be granted:
 
@@ -17,7 +16,7 @@ system-observe
 system-trace
 netlink-connector
 
-# Execute the following commands once to grant these permissions:
+# Execute the following commands to get permissions:
 sudo snap connect ssta:network-observe
 sudo snap connect ssta:process-control
 sudo snap connect ssta:system-observe
