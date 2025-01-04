@@ -14,14 +14,14 @@ network-observe\
 process-control\
 system-observe\
 system-trace\
-netlink-connector\
+netlink-connector
 
 # Execute the following commands to get permissions:
 sudo snap connect ssta:network-observe\
 sudo snap connect ssta:process-control\
 sudo snap connect ssta:system-observe\
 sudo snap connect ssta:system-trace\
-sudo snap connect ssta:netlink-connector\
+sudo snap connect ssta:netlink-connector
 
 # Usage
 Simply run SSTA via the terminal:
