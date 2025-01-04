@@ -47,7 +47,8 @@ Details:
 
 Output of more Details:
 
-![grafik](https://github.com/user-attachments/assets/c9bab4f0-c138-4b8b-a716-538ac0cac846)
+![grafik](https://github.com/user-attachments/assets/4b3b9888-b022-4c46-bd00-73fa42ea0b73)
+
 
 ==> log for 10 Minutes and import for example in libreoffice:
 
