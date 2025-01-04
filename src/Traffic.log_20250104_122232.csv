@@ -1,0 +1,3 @@
+Datum:Zeit:IP;Port;Netname;Orgname;lsof command
+2025-01-04:12:22:33;162.213.35.20:https;CANONICAL-USA;Canonical;firefox
+2025-01-04:12:22:34;34.107.243.93:https;GOOGL-2;Google;firefox

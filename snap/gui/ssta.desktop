@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=Simple Traffic Analyzer
+Comment=SSTA is a simple tool to analyse current network connections.
+Exec=ssta
+Icon=${SNAP}/meta/gui/ssta.png
+Terminal=true
+Type=Application
+Categories=Network
+StartupNotify=true

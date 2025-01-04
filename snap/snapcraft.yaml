@@ -1,0 +1,51 @@
+name: ssta
+version: '1.0'
+summary: Simple Traffic Analyzer
+description: >
+  Have you ever wondered which companies and services your computer 
+  is connected to while browsing the internet? 
+  The script ssta.bash shows you all currently established connections 
+  along with their corresponding pid numbers 
+  If you want, you can even log them for 10 minutes in a Traffic.log file
+
+base: core24  # Basis-Snap für moderne Distributionen 
+
+confinement: strict  # sicherer Modus
+
+parts:
+  script:
+    source: ./src
+    plugin: dump
+    organize: # Bereich zum kopieren der Scripte an die richtige Stelle
+      "ssta.bash": bin/ssta  # Skript als ausführbares Kommando verlinken
+      "ssta-setup.bash": bin/ssta-setup # Skrip um festzustellen ob erste Ausführung ja/nein 
+      
+    build-packages: # Pakete in snap integrieren, während dem build prozess
+      - dialog  
+      - iproute2 
+      - whois 
+      - lsof 
+
+    stage-packages: # # Pakete in snap integrieren, die zum laufen benötigt werden
+      - dialog   
+      - iproute2 
+      - whois    
+      - lsof     
+
+apps:
+  ssta:
+    command-chain: # Wird vor dem script ssta.bash ausgeführt
+      - bin/ssta-setup # Skript welches beim ersten den User auffordert die snap connections zu tätigen
+    command: bin/ssta  # Verweis auf Skript
+
+    plugs: # Bereich für Berechtigung
+      - network             # Berechtigung für Netzwerkzugriffe
+      - network-bind        # Berechtigung für Ports
+      - home                # Zugriff auf das Home-Verzeichnis
+      - system-observe      # Berechtigung auf Systeminformationen (für `ss` und `lsof`)
+      - network-status      # Berechtigung auf Netzwerk Status ( für 'whois")
+      - network-observe     # Berechtigung um Netzwerk zu beobachten , notwendig für Fortschrittsanzeige
+      - process-control     # Berechtigung um Prozessnummer zu ermitteln
+      - system-trace        # Berechtigung um lsof ausgabe tracken zu können
+      - netlink-connector   # Berechtigung um Netzwerkverkehr durch Kernel zu sehen
+
