@@ -4,6 +4,10 @@ SSTA is a simple tool that helps you monitor your computer's current network con
 It shows all active connections along with their associated process IDs. \
 Optionally, you can log the connections for 10 minutes into a log file.\
 
+<a href="https://snapcraft.io/ssta">
+    <img alt="Get it from the Snap Store" src=https://snapcraft.io/en/dark/install.svg />
+  </a>
+
 # Permissions
 
 To run the program correctly, the following Snap permissions must be granted:
