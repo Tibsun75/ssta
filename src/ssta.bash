@@ -55,7 +55,7 @@ show_progress() {
 # Zeigt eine Liste der Verbindungen in einem Dialog-Menü an und gibt die Auswahl zurück
 select_connection() {
 	local connection_list=("${!1}")
-	dialog --no-lines --title "$title_connections" --cancel-label "$cancel_label" --menu "$msg_select_connection" 30 70 20 "${connection_list[@]}" 2>&1 >/dev/tty
+	dialog --no-lines --title "$title_connections" --no-cancel --menu "$msg_select_connection" 30 70 20 "${connection_list[@]}" 2>&1 >/dev/tty
 }
 
 # Zeigt eine Nachricht in einem Dialog-Fenster an
@@ -148,7 +148,6 @@ set_turkish_texts() {
 	pid_="Pid Numarası"
 	connection_to="Bağlantı"
 	port_="Port türü"
-
 }
 
 # Setzt englische Texte
@@ -182,7 +181,6 @@ set_english_texts() {
 	pid_="Pid Number"
 	connection_to="Connection to"
 	port_="Port Type"
-
 }
 
 # Setzt spanische Texte
@@ -215,8 +213,6 @@ set_spanish_texts() {
 	pid_="Número de Pid"
 	connection_to="Conexión a"
 	port_="tipo de puerto"
-
-
 }
 
 # Setzt indische Texte
@@ -249,7 +245,6 @@ set_hindi_texts() {
 	pid_="पीआईडी नंबर"
 	connection_to="कनेक्शन से"
 	port_="पोर्ट प्रकार"
-
 }
 
 
@@ -288,8 +283,7 @@ log_traffic_for_10_minutes() {
     # Update der Fortschrittsanzeige
     echo $progress_percentage | dialog --no-lines --title "$title_connections" --gauge "$msg_traffic" 7 60
     sleep 10 # Alle 10 Sekunden ein Update
-	done
-  
+	done 
 }
 
 help_msg() {
@@ -415,3 +409,5 @@ done
 
 # Starte das Hauptprogramm
 main
+
+# Ende 
